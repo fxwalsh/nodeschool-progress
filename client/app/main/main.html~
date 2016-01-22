@@ -1,0 +1,31 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>GIT-IT</h1>
+    <p class="lead">Progress Monitor</p>
+    <img src="assets/images/witlogo.png" alt="WIT">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Progress so far:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-3 col-lg-3 col-sm-2" ng-repeat="user in progress">
+        <li><a href="#" tooltip="{{user.name}}"><em>{{user.name}}</em> </a>
+	   <ul ng-repeat="stage in user.completed"><li>{{stage}}</li></ul>
+
+       </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Developed using Angular Fullstack v2.0.13 by |
+        <a href="mailto:fxwalsh@wit.ie?Subject=GIT-IT%20Progress"">fxwalsh@wit.ie</a> |
+         </p>
+  </div>
+</footer>
